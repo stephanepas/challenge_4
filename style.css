@@ -7,9 +7,6 @@ html {
   font-size: 15px;
   font-family: Spartan;
 }
-body {
-  /* background-color: yellow; */
-}
 /* vague dans le body */
 #vague1 {
   position: fixed;
@@ -28,7 +25,7 @@ picture img {
 main {
   width: 90%;
   margin: 0 auto;
-  padding: 4rem auto;
+  padding: 4rem 0;
 }
 /* header */
 #intro {
@@ -87,6 +84,7 @@ h1 {
 }
 @media only screen and (min-width: 376px) {
   main {
+    padding: 0;
     display: grid;
     grid-template-rows: 50vh 50vh;
     grid-template-columns: 1fr 1fr;
@@ -98,7 +96,10 @@ h1 {
   }
   h1,
   #intro p {
-    text-align: start;
+    text-align: left;
+  }
+  #intro p {
+    margin: 0;
   }
   #etoiles {
     grid-area: 1/2/2/3;
@@ -106,6 +107,7 @@ h1 {
     grid-template-rows: 1fr repeat(3, auto) 1fr;
     grid-template-columns: repeat(3, 2rem) 1fr;
     gap: 1rem;
+    margin-bottom: 0;
   }
   .rated {
     margin: 0;
