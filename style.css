@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+  font-family: Spartan;
+}
+body {
+  /* background-color: yellow; */
+}
+/* vague dans le body */
+#vague1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#vague2 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+picture img {
+  width: 100%;
+}
+/* dimensions du contenu */
+main {
+  width: 90%;
+  margin: 0 auto;
+  padding: 4rem auto;
+}
+/* header */
+#intro {
+  color: hsl(300, 35%, 29%);
+}
+h1,
+#intro p {
+  text-align: center;
+}
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+#intro p {
+  margin-bottom: 2rem;
+}
+/* parametrage de la partie étoiles */
+#etoiles {
+  margin-bottom: 4rem;
+}
+.rated {
+  width: 100%;
+  text-align: center;
+  background-color: hsla(333, 80%, 67%, 0.15);
+  border-radius: 10px;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+/* Parametrage partie photo */
+.buyer {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+.image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.img {
+  border-radius: 50%;
+  height: 2.8rem;
+  margin-right: 2rem;
+}
+.nom h2 {
+  color: white;
+}
+.nom h3 {
+  color: hsl(333, 80%, 67%);
+}
+.buyer p {
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+@media only screen and (min-width: 376px) {
+  main {
+    display: grid;
+    grid-template-rows: 50vh 50vh;
+    grid-template-columns: 1fr 1fr;
+  }
+  #intro {
+    grid-area: 1/1/2/2;
+    align-self: center;
+    padding-right: 6rem;
+  }
+  h1,
+  #intro p {
+    text-align: start;
+  }
+  #etoiles {
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-rows: 1fr repeat(3, auto) 1fr;
+    grid-template-columns: repeat(3, 2rem) 1fr;
+    gap: 1rem;
+  }
+  .rated {
+    margin: 0;
+    display: flex;
+  }
+  .rated1 {
+    grid-area: 2/1/3/5;
+    width: calc(100% - 4rem);
+  }
+  .rated2 {
+    grid-area: 3/2/4/5;
+    width: calc(100% - 2rem);
+  }
+  .rated3 {
+    grid-area: 4/3/5/5;
+  }
+  .star {
+    margin: 0 1rem;
+  }
+  #buyer {
+    grid-area: 2/1/3/3;
+    display: grid;
+    grid-template-rows: 2rem 2rem 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .buyer {
+    margin: 0;
+    height: max-content;
+  }
+  .buyer1 {
+    grid-area: 1/1/4/2;
+  }
+  .buyer2 {
+    grid-area: 2/2/4/3;
+  }
+  .buyer3 {
+    grid-area: 3/3/4/4;
+  }
+}
